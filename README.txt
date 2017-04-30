@@ -14,6 +14,10 @@ tpruvot@github:
 DJM34:
   BTC donation address: 1NENYmxwZGHsKFmyjTc5WferTn5VTFb7Ze
 
+leoreinaux:
+	BTC donation address: 17odECgcGq3fezLtJsz85enWhzeT5F66iL
+	XZC donation address: aPznowkKBJuJAeAam4LLz3wVWUTy52MM1g
+
 cbuchner v1.2:
   LTC donation address: LKS1WDKGED647msBQfLBHV3Ls8sveGncnm
   BTC donation address: 16hJF5mceSojnTD3ZTUDqdRhDyPJzoRakM

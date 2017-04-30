@@ -1,7 +1,10 @@
 #include <memory.h>
 
 #ifdef __INTELLISENSE__
-/* just for vstudio code colors */
+#define __CUDA_ARCH__ 500
+#define __byte_perm(x,y,c) x
+#define __shfl(x,y,c) x
+#define atomicExch(p,x) x
 #endif
 
 #include "cuda_helper.h"
@@ -49,7 +52,7 @@ __device__ __forceinline__ void ST4S(const int index, const uint2 data)
 	shared_mem[(index * blockDim.y + threadIdx.y) * blockDim.x + threadIdx.x] = data;
 }
 
-#if __CUDA_ARCH__ == 300
+#if __CUDA_ARCH__ >= 300
 __device__ __forceinline__ uint32_t WarpShuffle(uint32_t a, uint32_t b, uint32_t c)
 {
 	return __shfl(a, b, c);
